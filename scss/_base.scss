@@ -1,0 +1,200 @@
+/* Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap');
+
+:root {
+  // Colors
+  --color-cyan: #5FB4A2;
+  --color-red: #F43030;
+  --color-dark-blue: #203A4C;
+  --color-grayish-dark-blue: #33323D;
+  --color-very-light-gray: #FAFAFA;
+  --color-light-gray: #EAEAEB;
+  --color-white: #FFFFFF;
+  
+  --color-border-gray: #DCDCDE;
+  --color-form-input-bg: #E5E5E6;
+  --color-form-input-place-holder: #9D9DA3;
+  
+  // Typography
+  --font-family-sans: 'Public Sans', sans-serif;
+  --font-family-serif: 'Ibarra Real Nova', serif;
+
+  // Font Weights
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-semiBold: 600;
+  --weight-bold: 700;
+
+  // spacing
+  --space-max-width: 111rem;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 1.6rem;
+  color: var(--color-grayish-dark-blue);
+  background-color: var(--color-very-light-gray);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  display: block;
+}
+
+// Type Specs
+.t-h1 {
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-serif);
+  @media (max-width: 1199px) {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.36px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.45px;
+  }
+}
+
+.t-h2 {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.36px;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-serif);
+}
+
+.t-h3 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.29px;
+  font-weight: var(--weight-regular);
+  font-family: var(--font-family-serif);
+}
+
+.t-body1 {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+  font-weight: var(--weight-regular);
+  font-family: var(--font-family-sans);
+}
+
+.t-body1--project-intro {
+  @media (max-width: 1023px) {
+    font-size: 1.5rem;
+  }
+}
+
+.t-body2 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+  font-weight: var(--weight-regular);
+  font-family: var(--font-family-sans);
+}
+
+.t-white {
+  color: var(--color-white);
+}
+
+.t-bold {
+  font-weight: var(--weight-bold);
+}
+
+.t-dark-gray {
+  color: var(--color-grayish-dark-blue);
+}
+
+.t-opacity8 {
+  opacity: .8;
+}
+
+.t-nav-link {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  font-weight: var(--weight-semiBold);
+  font-family: var(--font-family-sans);
+  text-decoration: none;
+  transition: var(--transition) color;
+  &:hover {
+    color: var(--color-cyan);
+  }
+}
+
+.t-nav-link--active {
+  color: var(--color-cyan);
+}
+
+.t-form-label {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  font-family: var(--font-family-sans);
+}
+
+/* Screen Reader Only */
+.screen-reader-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+/* Page transition animation */
+.transition-fade {
+  transition: opacity 0.4s ease-out,transform .6s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(5%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+}
